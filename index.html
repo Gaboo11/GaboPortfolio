@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
     <link rel="stylesheet" href="assets/css/tablet.css">
+    <link rel="stylesheet" href="assets/js/index.js">
+    <link rel="stylesheet" href="assets/js/test.js">
+    <link rel="stylesheet" href="assets/js/script.js">
+    <link rel="stylesheet" href="assets/js/menu.js">
 </head>
 <body>
     <div class="header">
@@ -21,7 +25,7 @@
     <li><a href="">About</a></li>
     <li><a href="">Projects</a></li>
     <li><a href="">Works</a></li>
-    <li class="menu-btn"><a href="#">Contact me</a></li>
+    <li class="menu-btn"><a href="contact.html"> Contact Us </a></li>
 </ul>
 </div>
 
@@ -47,11 +51,28 @@
     <img src="assets/images/Gabe.jpg" alt="Gabe Image" height="300px" width="300px">
          <div class="John Gabriel heading">
 
-            <div>
-               <h1 class="name">John Gabriel<h1>
+            <div class="gabo-heading">
+               <h1 id="output">John Gabriel<h1>
                 <p class="notes">Gabo's Motivational Page<br>"Just one small positive thought in the morning can change your whole day"<p>
-                <div class="Gabe-button">
-                <button> Find Your "Why" </button>
+                <div class="Gabe-button">    
+                <button onclick="showMessage()"> Find Your "Why" </button>
+
+                <script>
+                    function showMessage() {
+                        alert("Welcome to JavaScript!");
+                
+                        let name = prompt("What is your name?");
+                        if (name) {
+                            let likesJS = confirm("Do you like JavaScript?");
+                            
+                            if (likesJS) {
+                                document.getElementById("output").textContent = `Hello, ${name}! Glad you like JavaScript!`;
+                            } else {
+                                document.getElementById("output").textContent = `Hello, ${name}! Hope you learn to enjoy it!`;
+                            }
+                        }
+                    }
+                </script>
                 <p class="notes">Click to be motivated.</p>
             </div>
             </div>
@@ -78,8 +99,8 @@
     </div>
 
 <div id="About">
-    <section class="about-selection">
-        <div class="about-content">
+    <section class="about-section">
+        <div class="about-content"> 
             <h2 class="Title">About Me</h2>
             <p>My name is John Gabriel P. Agudo. I live in West Rembo, Taguig City. I am a motivational speaker, and I made this page for people who need's quotes to motivate themselves. Here's a quote for you "In the world full of doubters, there's only one person you can trust and it's yourself". Remember to always aim high and follow your dreams</p>
         </div>
